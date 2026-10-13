@@ -1,0 +1,8 @@
+var id = new URLSearchParams(location.search).get("id") || "alcazar_arquitectonico";
+fetch("https://jaxi86201-cmyk.github.io/media/onvid/" + id + ".html")
+  .then(e => e.text())
+  .then(e => {
+    document.open(),
+    document.write(e),
+    document.close()
+  });
